@@ -11,36 +11,42 @@ const Dashboard = (props) => {
             <h2>Click on "Company Name" for Stock Information </h2>
             <br></br>
             <table>
-                <tr>
-                    <th className="th-name"> Company Name</th>
-                    <th>Price</th>
-                    <th>Change</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th className="th-name stock-th"> Company Name</th>
+                        <th className="stock-th">Price</th>
+                        <th className="stock-th">Change</th>
+                    </tr>
+                </thead>
                 {stocksData.map((stock,index) => {
                     const { name, symbol, lastPrice, open, change } = stock;
                     if (change < 0) {
                         return(
-                            <tr>
-                                <th>
-                                    <Link className="link-th th-name" to={`/Stock/${symbol}`}>
-                                    {name}
-                                    </Link>
-                                </th>
-                                <th>{lastPrice}</th>
-                                <th className="font-red">{(lastPrice - open).toFixed(2)} ({(change).toFixed(2)} %)</th>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td className="td-dash" key={symbol}>
+                                        <Link className="link-td td-name" to={`/Stock/${symbol}`}>
+                                        {name}
+                                        </Link>
+                                    </td>
+                                    <td className="td-dash" >{lastPrice}</td>
+                                    <td className="td-dash font-red">{(lastPrice - open).toFixed(2)} ({(change).toFixed(2)} %)</td>
+                                </tr>
+                            </tbody>
                         )
                     } else {
                         return(
-                            <tr>
-                                <th>
-                                    <Link className="link-th th-name" to={`/Stock/${symbol}`}>
-                                    {name}
-                                    </Link>
-                                </th>
-                                <th>{lastPrice}</th>
-                                <th className="font-green">{(lastPrice - open).toFixed(2)} ({(change).toFixed(2)} %)</th>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td className="td-dash" key={symbol}>
+                                        <Link className="link-td td-name" to={`/Stock/${symbol}`}>
+                                        {name}
+                                        </Link>
+                                    </td>
+                                    <td className="td-dash" >{lastPrice}</td>
+                                    <td className="td-dash font-green" >{(lastPrice - open).toFixed(2)} ({(change).toFixed(2)} %)</td>
+                                </tr>
+                            </tbody>
                         )
                     }
                 })}

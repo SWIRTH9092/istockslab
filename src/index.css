@@ -31,7 +31,7 @@ table {
   margin-right: auto;
 }
 
-th {
+.td-dash {
   border-bottom: 2px solid black;
   font-size: 1.5rem;
   padding: 5px;
@@ -46,7 +46,7 @@ th {
   color: red;
 }
 
-.link-th {
+.link-td {
   border-bottom: 2px solid black;
   font-size: 1.5rem;
   padding: 5px;
@@ -57,9 +57,20 @@ th {
   width: 20rem;
 }
 
+.td-name {
+  width: 20rem;
+}
+
 .th-name {
   width: 20rem;
 }
+
+.stock-th {
+    font-size: 1.5rem;
+    padding: 5px;
+    margin: 5px;
+    color: black;
+  }
 
 .stock-td {
   font-size: 1.5rem;
@@ -69,6 +80,6 @@ th {
   color: black;
 }
 
-.stock-td-r {
+.stock-td- {
   text-align: right;
 }
