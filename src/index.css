@@ -11,3 +11,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-around; 
+  background-color: purple;
+  color: white;
+  padding: 15px;
+  font-size: 2em;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  border-bottom: 2px solid black;
+  font-size: 1.5rem;
+  padding: 5px;
+  margin: 5px;
+  text-align: left;
+}
+.font-green {
+  color: green;
+}
+
+.font-red {
+  color: red;
+}
+
+.link-th {
+  border-bottom: 2px solid black;
+  font-size: 1.5rem;
+  padding: 5px;
+  margin: 5px;
+  text-align: left;
+  text-decoration: none;
+  color: black;
+  width: 20rem;
+}
+
+.th-name {
+  width: 20rem;
+}
+
+.stock-td {
+  font-size: 1.5rem;
+  padding: 5px;
+  margin: 5px;
+  text-align: left;
+  color: black;
+}
+
+.stock-td-r {
+  text-align: right;
+}
